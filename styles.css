@@ -1,181 +1,157 @@
-/* General Styling */
+/* Global styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #1e824c, #2980b9);
-  color: white;
-  background-image: url('cricket-silhouette.png'); /* Use cricket-themed silhouette image */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: #f4f4f4;
 }
 
+/* Navigation Bar */
 nav {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 10px 0;
+    background: #222;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav ul {
-  list-style: none;
-  padding: 0;
-  text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 nav ul li {
-  display: inline;
-  margin: 0 20px;
+    display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
-  color: #f1c40f;
+    background-color: #555;
+    border-radius: 5px;
 }
 
+/* Header and Sections */
 header {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  text-align: center;
-  padding: 20px;
-  border-bottom: 2px solid #fff;
-}
-
-h1 {
-  margin: 0;
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to right, #243b55, #141e30);
+    color: white;
 }
 
 section {
-  padding: 20px;
-  margin: 20px 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 40px;
 }
 
 h2 {
-  color: #f1c40f;
+    text-align: center;
+    color: #f9ca24;
 }
 
-/* Player Cards */
-#featured-players, #top-matches, #fan-zone {
-  padding: 20px;
+.movie-posters img, .character-bios img {
+    width: 400px;
+    height: auto;
+    margin-right: 10px;
+    border-radius:20px;
 }
 
-.player-card {
-  display: inline-block;
-  width: 30%;
-  margin: 10px;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  color: #333;
+.posters, .character-bios {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.player-card img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+.character-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 50px;
+    margin: 10px;
+    border: 3px solid #f9ca24;
+    border-radius: 50px;
+    max-width: 300px;
+    text-align: center;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .player-card {
-      width: 45%;
-  }
+.movie-trailers iframe {
+    margin: 10px auto;
+    margin-left: 100px;
+    display:inline-block ;
+    border-radius: 30px;
 }
 
-@media (max-width: 480px) {
-  .player-card {
-      width: 90%;
-  }
+/* Quote of the Day */
+.quote-of-the-day {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-style: italic;
 }
 
-.match, .fan-story-form {
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #333;
-  padding: 15px;
-  border-radius: 8px;
-  margin: 10px;
+/* Trivia Quiz */
+.trivia-quiz {
+    background-color: #2f3640;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-/* Form Styling */
-#fan-story-form input, #fan-story-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+#quiz-container {
+    margin: 20px 0;
 }
 
-#fan-story-form button {
-  background-color: #27ae60;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+button {
+    padding: 10px 20px;
+    background-color: #f9ca24;
+    color: black;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
 }
 
-#fan-story-form button:hover {
-  background-color: #2ecc71;
+button:hover {
+    background-color: #e1b12c;
 }
 
-#fan-stories {
-  margin-top: 20px;
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-#fan-stories ul {
-  list-style-type: none;
-  padding: 0;
+ul li {
+    margin: 5px 0;
+    cursor: pointer;
 }
 
-#fan-stories li {
-  background-color: #e8f5e9;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 4px;
-  color: #333;
+ul li:hover {
+    color: #f9ca24;
 }
 
-#map-container {
-  height: 300px;
-  background-color: rgba(255, 255, 255, 0.3);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-header h1{
-  color: #f1c40f;
+.character-card img{
+width: 200px;
 }
 
-.player-profile h3{
-  color:#f1c40f
-
-}
-.player-profile strong{
-  color:tan;
+.character-card h3{
+    color: #e1b12c;
 }
 
-#map {
-  height: 500px;
-  width: 100%;
+h1{
+    color: #e1b12c;
 }
 
-.container{
-  display: inline-block;
-  margin-right:50px;
-}
-.container p{
-  color:aquamarine;
+h1:hover{
+    color: aqua;
 }
